@@ -34,6 +34,8 @@ public final class NativeTemplateStyle {
   // Call to action background color.
   private ColorDrawable callToActionBackgroundColor;
 
+  private float cornerRadius;
+
   // All templates have a primary text area which is populated by the native ad's headline.
 
   // Primary text typeface.
@@ -154,6 +156,10 @@ public final class NativeTemplateStyle {
     return mainBackgroundColor;
   }
 
+  public float getCornerRadius() {
+    return cornerRadius;
+  }
+
   /** A class that provides helper methods to build a style object. */
   public static final class Builder {
 
@@ -264,6 +270,13 @@ public final class NativeTemplateStyle {
       this.styles.mainBackgroundColor = mainBackgroundColor;
       return this;
     }
+
+    @CanIgnoreReturnValue
+    public Builder withCornerRadius(float cornerRadius) {
+      this.styles.cornerRadius = cornerRadius;
+      return this;
+    }
+
 
     public NativeTemplateStyle build() {
       return styles;

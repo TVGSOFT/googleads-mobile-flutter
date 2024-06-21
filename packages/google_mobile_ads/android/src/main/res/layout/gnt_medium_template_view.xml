@@ -123,6 +123,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/headline"
+                android:gravity="center_vertical"
                 >
               <TextView
                   android:background="@drawable/gnt_rounded_corners_shape"

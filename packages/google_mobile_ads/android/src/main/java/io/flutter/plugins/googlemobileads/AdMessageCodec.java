@@ -233,6 +233,7 @@ class AdMessageCodec extends StandardMessageCodec {
       FlutterNativeTemplateStyle nativeTemplateStyle = (FlutterNativeTemplateStyle) value;
       writeValue(stream, nativeTemplateStyle.getTemplateType());
       writeValue(stream, nativeTemplateStyle.getMainBackgroundColor());
+      writeValue(stream, nativeTemplateStyle.getCornerRadius());
       writeValue(stream, nativeTemplateStyle.getCallToActionStyle());
       writeValue(stream, nativeTemplateStyle.getPrimaryTextStyle());
       writeValue(stream, nativeTemplateStyle.getSecondaryTextStyle());
@@ -419,7 +420,8 @@ class AdMessageCodec extends StandardMessageCodec {
             (FlutterNativeTemplateTextStyle) readValueOfType(buffer.get(), buffer),
             (FlutterNativeTemplateTextStyle) readValueOfType(buffer.get(), buffer),
             (FlutterNativeTemplateTextStyle) readValueOfType(buffer.get(), buffer),
-            (FlutterNativeTemplateTextStyle) readValueOfType(buffer.get(), buffer));
+            (FlutterNativeTemplateTextStyle) readValueOfType(buffer.get(), buffer),
+                ((Double) readValueOfType(buffer.get(), buffer)).floatValue());
       case VALUE_NATIVE_TEMPLATE_TEXT_STYLE:
         return new FlutterNativeTemplateTextStyle(
             (ColorDrawable) readValueOfType(buffer.get(), buffer),

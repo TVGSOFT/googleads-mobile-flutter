@@ -974,9 +974,7 @@ class AdMessageCodec extends StandardMessageCodec {
       writeValue(buffer, value.primaryTextStyle);
       writeValue(buffer, value.secondaryTextStyle);
       writeValue(buffer, value.tertiaryTextStyle);
-      if (defaultTargetPlatform == TargetPlatform.iOS) {
-        writeValue(buffer, value.cornerRadius);
-      }
+      writeValue(buffer, value.cornerRadius);
     } else if (value is TemplateType) {
       buffer.putUint8(_valueNativeTemplateType);
       writeValue(buffer, value.index);

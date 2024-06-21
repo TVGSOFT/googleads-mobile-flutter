@@ -56,7 +56,7 @@ public class FlutterNativeTemplateStyleTest {
   public void testAsTemplateView_noStylesDefined() {
     FlutterNativeTemplateStyle flutterNativeTemplateStyle =
         new FlutterNativeTemplateStyle(
-            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null);
+            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null, 0);
 
     FlutterNativeTemplateStyle spy = spy(flutterNativeTemplateStyle);
     NativeTemplateStyle mockNativeTemplateStyle = mock(NativeTemplateStyle.class);
@@ -84,7 +84,8 @@ public class FlutterNativeTemplateStyleTest {
             ctaStyle,
             primaryStyle,
             secondaryStyle,
-            tertiaryStyle);
+            tertiaryStyle,
+                0);
 
     FlutterNativeTemplateStyle spy = spy(flutterNativeTemplateStyle);
     NativeTemplateStyle mockNativeTemplateStyle = mock(NativeTemplateStyle.class);
@@ -101,7 +102,7 @@ public class FlutterNativeTemplateStyleTest {
   public void testAsNativeTemplateStyle_noStylesDefined() {
     FlutterNativeTemplateStyle flutterNativeTemplateStyle =
         new FlutterNativeTemplateStyle(
-            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null);
+            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null, 0);
 
     NativeTemplateStyle templateStyle = flutterNativeTemplateStyle.asNativeTemplateStyle();
 
@@ -187,7 +188,8 @@ public class FlutterNativeTemplateStyleTest {
             ctaStyle,
             primaryStyle,
             secondaryStyle,
-            tertiaryStyle);
+            tertiaryStyle,
+                0);
 
     NativeTemplateStyle templateStyle = flutterNativeTemplateStyle.asNativeTemplateStyle();
 

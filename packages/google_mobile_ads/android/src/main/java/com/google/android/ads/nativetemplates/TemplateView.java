@@ -17,7 +17,9 @@ package com.google.android.ads.nativetemplates;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -153,9 +155,13 @@ public final class TemplateView extends FrameLayout {
       tertiaryView.setTextSize(tertiaryTextSize);
     }
 
-    Drawable ctaBackground = styles.getCallToActionBackgroundColor();
+    ColorDrawable ctaBackground = styles.getCallToActionBackgroundColor();
     if (ctaBackground != null && callToActionView != null) {
-      callToActionView.setBackground(ctaBackground);
+      GradientDrawable gradientDrawable = new GradientDrawable();
+      gradientDrawable.setCornerRadius(styles.getCornerRadius());
+      gradientDrawable.setColor(ctaBackground.getColor());
+
+      callToActionView.setBackground(gradientDrawable);
     }
 
     Drawable primaryBackground = styles.getPrimaryTextBackgroundColor();

@@ -302,7 +302,7 @@ public class AdMessageCodecTest {
   public void nativeTemplateStyle_nullProperties() {
     FlutterNativeTemplateStyle style =
         new FlutterNativeTemplateStyle(
-            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null);
+            FlutterNativeTemplateType.MEDIUM, null, null, null, null, null, 0);
 
     ByteBuffer data = codec.encodeMessage(style);
     FlutterNativeTemplateStyle result =
@@ -335,7 +335,8 @@ public class AdMessageCodecTest {
             ctaStyle,
             primaryStyle,
             secondaryStyle,
-            tertiaryStyle);
+            tertiaryStyle,
+                0);
 
     ByteBuffer data = codec.encodeMessage(style);
     FlutterNativeTemplateStyle result =
