@@ -10,9 +10,10 @@
       >
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
+        android:maxHeight="200dp"
         android:background="@drawable/gnt_outline_shape"
         >
       <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,6 @@
           android:layout_marginStart="@dimen/gnt_default_margin"
           android:layout_marginTop="@dimen/gnt_default_margin"
           android:layout_marginBottom="@dimen/gnt_default_margin"
-          app:layout_constraintDimensionRatio="H,4:1"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
@@ -87,8 +87,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                ></TextView>
+                app:layout_constraintTop_toTopOf="parent" />
+
           </LinearLayout>
           <LinearLayout
               android:id="@+id/row_two"
@@ -120,6 +120,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 >
             </TextView>
+
             <RatingBar
                 android:id="@+id/rating_bar"
                 android:background="@android:color/transparent"
@@ -141,6 +142,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
             </RatingBar>
+
             <TextView
                 android:id="@+id/secondary"
                 android:background="@color/gnt_white"
@@ -157,10 +159,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ad_notification_view"
-                app:layout_constraintTop_toTopOf="parent"
-                ></TextView>
+                app:layout_constraintTop_toTopOf="parent" />
 
           </LinearLayout>
+
           <androidx.appcompat.widget.AppCompatButton
               android:id="@+id/cta"
               android:layout_width="match_parent"
@@ -176,9 +178,7 @@
               app:layout_constraintHeight_percent="0.35"
               />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
       </androidx.constraintlayout.widget.ConstraintLayout>
 
