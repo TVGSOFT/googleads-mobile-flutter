@@ -109,8 +109,7 @@
                   app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintStart_toEndOf="parent"
-                  app:layout_constraintTop_toTopOf="parent"
-                  ></TextView>
+                  app:layout_constraintTop_toTopOf="parent" />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/row_two"
@@ -163,11 +162,12 @@
                   style="?android:attr/ratingBarStyleSmall">
 
               </RatingBar>
+
               <TextView
                   android:id="@+id/secondary"
                   android:background="@color/gnt_white"
                   android:layout_width="wrap_content"
-                  android:layout_height="match_parent"
+                  android:layout_height="wrap_content"
                   android:gravity="top"
                   android:textSize="@dimen/gnt_text_size_small"
                   android:textColor="@color/gnt_gray"
@@ -179,8 +179,7 @@
                   app:layout_constraintBottom_toBottomOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintStart_toEndOf="@id/ad_notification_view"
-                  app:layout_constraintTop_toTopOf="parent"
-                  ></TextView>
+                  app:layout_constraintTop_toTopOf="parent" />
 
             </LinearLayout>
 
@@ -207,9 +206,10 @@
       <androidx.appcompat.widget.AppCompatButton
           android:id="@+id/cta"
           android:layout_width="match_parent"
-          android:layout_height="0dp"
+          android:layout_height="@dimen/gnt_medium_cta_button_height"
           android:background="@color/gnt_blue"
           android:textColor="@color/gnt_white"
+          android:layout_marginTop="@dimen/gnt_small_margin"
           android:layout_marginLeft="5dp"
           android:layout_marginRight="5dp"
           android:lines="1"
@@ -218,7 +218,6 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/body"
-          app:layout_constraintHeight_min="35dp"
       />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
