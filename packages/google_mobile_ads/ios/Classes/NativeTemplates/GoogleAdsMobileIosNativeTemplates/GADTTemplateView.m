@@ -242,6 +242,9 @@ static NSString *const GADTBlue = @"#5C84F0";
     self.storeView.hidden = YES;
     ((UILabel *)self.advertiserView).text = nativeAd.advertiser;
     self.advertiserView.hidden = NO;
+  } else {
+    self.advertiserView.hidden = YES;
+    self.storeView.hidden = YES;
   }
 
   // Either show the number of stars an app has, or show the body of the ad.
