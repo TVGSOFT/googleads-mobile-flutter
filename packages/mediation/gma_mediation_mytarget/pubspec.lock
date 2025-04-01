@@ -166,10 +166,11 @@ packages:
   google_mobile_ads:
     dependency: "direct main"
     description:
-      name: google_mobile_ads
-      sha256: "0d4a3744b5e8ed1b8be6a1b452d309f811688855a497c6113fc4400f922db603"
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/google_mobile_ads"
+      ref: main
+      resolved-ref: "262fd443e8339389423587643a94797251e1430d"
+      url: "https://github.com/TVGSOFT/googleads-mobile-flutter.git"
+    source: git
     version: "5.3.1"
   graphs:
     dependency: transitive
