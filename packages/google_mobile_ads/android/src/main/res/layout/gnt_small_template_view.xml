@@ -63,6 +63,7 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:maxLength="25"
               app:layout_constraintBottom_toTopOf="@+id/row_two"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintStart_toStartOf="parent"
